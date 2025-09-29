@@ -27,3 +27,36 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# ---- Core Java ----
+# Compiled class files
+*.class
+# Package files
+*.jar
+*.war
+*.ear
+# Annotation processing / JPA metamodel
+*.aj
+*.hbm.xml
+
+# Logs & temp
+*.log
+logs/
+tmp/
+temp/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# JVM crash dumps
+hs_err_pid*
+replay_pid*
+
+# ---- Build tools ----
+# Maven
+target/
+# Gradle (keep the wrapper!)
+.gradle/
+build/
+!gradle/wrapper/gra

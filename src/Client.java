@@ -14,7 +14,7 @@ public class Client {
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            System.out.println("🟢 Connected to server. Type messages:");
+            System.out.println("🟢 Connected to server. Enter your name:");
             String userInput;
 
             while((userInput = input.readLine()) != null){
