@@ -34,7 +34,7 @@ public class ClientGUI {
             out.println(name); // To send the name to the server
 
         }catch (IOException e){
-            JOptionPane.showMessageDialog(null, "⚠\uFE0F Could not connect to server: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Could not connect to server: " + e.getMessage());
             System.exit(1);
         }
     }

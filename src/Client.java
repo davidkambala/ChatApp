@@ -14,13 +14,13 @@ public class Client {
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            System.out.println("🟢 Connected to server. Enter your name:");
+            System.out.println("Connected to server. Enter your name:");
             String userInput;
 
             while((userInput = input.readLine()) != null){
                 out.println(userInput);
                 String response = in.readLine();
-                System.out.println("🧭 Server says: " + response);
+                System.out.println("Server says: " + response);
             }
             socket.close();
 

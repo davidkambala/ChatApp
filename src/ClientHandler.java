@@ -21,7 +21,7 @@ public class ClientHandler implements Runnable{
             synchronized (clientHandlers){
                 clientHandlers.add(this);
             }
-            ClientHandler.broadcast("🔔 " + clientName + " has joined the chat!");
+            ClientHandler.broadcast(clientName + " has joined the chat!");
 
         } catch (IOException e){
             e.printStackTrace();
@@ -32,7 +32,7 @@ public class ClientHandler implements Runnable{
         String message;
         try {
             while ((message = in.readLine()) != null){
-                ClientHandler.broadcast("💬 " + clientName + ": " + message);
+                ClientHandler.broadcast(clientName + ": " + message);
             }
         }catch (IOException e){
             System.out.println("Client disconnected: " + clientName);
@@ -42,7 +42,7 @@ public class ClientHandler implements Runnable{
                     clientHandlers.remove(this);
                 }
                 clientSocket.close();
-                ClientHandler.broadcast("👋 " + clientName + " has left the chat.");
+                ClientHandler.broadcast(clientName + " has left the chat.");
             }catch (IOException e){
                 e.printStackTrace();
             }
